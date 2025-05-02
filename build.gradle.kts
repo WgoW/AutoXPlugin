@@ -21,6 +21,10 @@ var pluginVersion = providers.gradleProperty("pluginVersion")
 var pluginId = providers.gradleProperty("pluginId")
 var pluginName = providers.gradleProperty("pluginName")
 
+changelog {
+    version.set(pluginVersion.get())
+}
+
 repositories {
     mavenCentral()
     intellijPlatform {
