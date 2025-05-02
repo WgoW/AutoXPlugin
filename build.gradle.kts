@@ -3,12 +3,17 @@ import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.25"
+    kotlin("jvm") version "2.1.20"
     id("org.jetbrains.intellij.platform") version "2.5.0"
     id("org.jetbrains.changelog") version "2.2.1" // Gradle Changelog Plugin
 }
 kotlin {
     jvmToolchain(17)
+
+//    compilerOptions {
+//    //显示启用k2编译器
+//        freeCompilerArgs.add("-Xuse-k2")
+//    }
 }
 
 group = "org.autojs.autojs"
